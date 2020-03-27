@@ -20,7 +20,7 @@ import java.util.List;
  * @author Swap
  */
 public interface PhotoService {
-    List<Photo> findProfilePhoto(Long profileId, Pageable pageable);
+    List<Photo> findProfilePhotos(Long profileId, Pageable pageable);
     List<Photo> findPopularPhotos(SortMode sortMode, Pageable pageable);
     long countAllPhotos();
     String viewLargePhoto(Long photoId) throws ObjectNotFoundException;
