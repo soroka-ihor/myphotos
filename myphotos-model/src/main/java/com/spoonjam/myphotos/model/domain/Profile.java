@@ -23,6 +23,7 @@ import javax.persistence.OneToMany;
 import javax.persistence.Table;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
+import javax.persistence.Transient;
 import javax.persistence.UniqueConstraint;
 import javax.validation.constraints.Min;
 import javax.validation.constraints.NotNull;
@@ -188,6 +189,11 @@ public class Profile extends AbstractDomain {
 
     public void setRating(int rating) {
         this.rating = rating;
+    }
+    
+    @Transient
+    public String getFullName() {
+        return String.format("%s %s", getFirstName(), getLastName());
     }
     
 }
