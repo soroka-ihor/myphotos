@@ -10,6 +10,7 @@ import java.util.Date;
 import javax.persistence.Basic;
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.EntityListeners;
 import javax.persistence.FetchType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
@@ -26,6 +27,7 @@ import javax.xml.bind.annotation.XmlRootElement;
  *
  * @author Swap
  */
+
 @Entity
 @Table(name = "access_token", catalog = "myphotos", schema = "")
 public class AccessToken implements Serializable {
